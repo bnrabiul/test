@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodieland - Delicious Recipes for Everyone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-10">
+                    <h1 class="text-2xl font-bold text-green-600">foodieland.</h1>
+                    <nav class="hidden md:flex space-x-8">
+                        <a href="#" class="text-gray-700 hover:text-green-600 font-medium">Home</a>
+                        <a href="#" class="text-gray-700 hover:text-green-600 font-medium">Recipes</a>
+                        <a href="#" class="text-gray-700 hover:text-green-600 font-medium">Blog</a>
+                        <a href="#" class="text-gray-700 hover:text-green-600 font-medium">Contact</a>
+                        <a href="#" class="text-gray-700 hover:text-green-600 font-medium">About us</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-700 hover:text-green-600">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                    <button class="text-gray-700 hover:text-green-600">
+                        <i class="fas fa-user text-xl"></i>
+                    </button>
+                    <button class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Spicy delicious chicken wings</h2>
+                    <p class="text-gray-600 mb-8 max-w-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                    <div class="flex items-center space-x-4">
+                        <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition duration-300">
+                            View Recipe
+                        </button>
+                        <div class="flex items-center text-gray-600">
+                            <i class="far fa-clock mr-2"></i>
+                            <span>25 minutes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://picsum.photos/seed/chickenwings/600/400.jpg" alt="Spicy Chicken Wings" class="rounded-2xl shadow-lg max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold text-gray-800 mb-8">Categories</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition duration-300 cursor-pointer">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-coffee text-yellow-600 text-2xl"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium">Breakfast</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition duration-300 cursor-pointer">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-leaf text-green-600 text-2xl"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium">Vegan</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition duration-300 cursor-pointer">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-drumstick-bite text-red-600 text-2xl"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium">Meat</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition duration-300 cursor-pointer">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-fish text-blue-600 text-2xl"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium">Seafood</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition duration-300 cursor-pointer">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-birthday-cake text-purple-600 text-2xl"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium">Dessert</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition duration-300 cursor-pointer">
+                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-pepper-hot text-orange-600 text-2xl"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium">Spicy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipes Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-2xl font-bold text-gray-800">Simple and tasty recipes</h3>
+                <a href="#" class="text-green-600 font-medium hover:underline">View All</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Recipe Card 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://picsum.photos/seed/burger/400/300.jpg" alt="Wagyu Beef Cheeseburger" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Big and Juicy Wagyu Beef Cheeseburger</h4>
+                        <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-gray-600">
+                                <i class="far fa-clock mr-2"></i>
+                                <span>30 minutes</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="fas fa-utensils mr-2"></i>
+                                <span>Easy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Recipe Card 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://picsum.photos/seed/salmon/400/300.jpg" alt="Lime Roasted Salmon" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Fresh Lime Roasted Salmon</h4>
+                        <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-gray-600">
+                                <i class="far fa-clock mr-2"></i>
+                                <span>25 minutes</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="fas fa-utensils mr-2"></i>
+                                <span>Medium</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Recipe Card 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://picsum.photos/seed/pasta/400/300.jpg" alt="Creamy Pasta" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Creamy Pasta with Mushrooms</h4>
+                        <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-gray-600">
+                                <i class="far fa-clock mr-2"></i>
+                                <span>20 minutes</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="fas fa-utensils mr-2"></i>
+                                <span>Easy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chef Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://picsum.photos/seed/chef/500/400.jpg" alt="Chef" class="rounded-2xl shadow-lg max-w-full h-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Everyone can be a chef in their own kitchen</h3>
+                    <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition duration-300">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-2xl font-bold text-gray-800">Instagram</h3>
+                <a href="#" class="text-green-600 font-medium hover:underline">@foodieland</a>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="relative overflow-hidden rounded-lg aspect-square group cursor-pointer">
+                    <img src="https://picsum.photos/seed/food1/300/300.jpg" alt="Instagram Food" class="w-full h-full object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fab fa-instagram text-white text-2xl"></i>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-lg aspect-square group cursor-pointer">
+                    <img src="https://picsum.photos/seed/food2/300/300.jpg" alt="Instagram Food" class="w-full h-full object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fab fa-instagram text-white text-2xl"></i>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-lg aspect-square group cursor-pointer">
+                    <img src="https://picsum.photos/seed/food3/300/300.jpg" alt="Instagram Food" class="w-full h-full object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fab fa-instagram text-white text-2xl"></i>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-lg aspect-square group cursor-pointer">
+                    <img src="https://picsum.photos/seed/food4/300/300.jpg" alt="Instagram Food" class="w-full h-full object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fab fa-instagram text-white text-2xl"></i>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-lg aspect-square group cursor-pointer">
+                    <img src="https://picsum.photos/seed/food5/300/300.jpg" alt="Instagram Food" class="w-full h-full object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fab fa-instagram text-white text-2xl"></i>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-lg aspect-square group cursor-pointer">
+                    <img src="https://picsum.photos/seed/food6/300/300.jpg" alt="Instagram Food" class="w-full h-full object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fab fa-instagram text-white text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-green-600">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h3 class="text-3xl font-bold text-white mb-4">Deliciousness to your inbox</h3>
+                <p class="text-green-100 mb-8">Enjoy weekly hand-picked recipes and tips</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-white">
+                    <button type="submit" class="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium transition duration-300">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-2xl font-bold mb-4">foodieland.</h4>
+                    <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Recipes</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">Breakfast</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Lunch</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Dinner</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Dessert</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Company</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 foodieland. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('.fa-bars');
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    // This would typically toggle a mobile menu
+                    alert('Mobile menu would open here');
+                });
+            }
+
+            // Newsletter form submission
+            const newsletterForm = document.querySelector('form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    if (email) {
+                        alert(`Thank you for subscribing with email: ${email}`);
+                        this.reset();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

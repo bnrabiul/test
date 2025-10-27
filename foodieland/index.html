@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodieland - Cooking Recipes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero-slider {
+      transition: transform 0.7s ease-in-out;
+    }
+
+    .recipe-card {
+      transition: all 0.3s ease;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .category-icon {
+      transition: all 0.3s ease;
+    }
+
+    .category-icon:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+  <!-- Navbar -->
+  <header class="border-b border-gray-100 sticky top-0 z-50 bg-white/90 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-gray-900 flex items-center">
+        <i class="fas fa-utensils text-emerald-500 mr-2"></i>
+        Foodieland<span class="text-emerald-500">.</span>
+      </a>
+      
+      <nav class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
+        <a href="/" class="hover:text-emerald-600 transition-colors">Home</a>
+        <a href="/recipe-details.html" class="hover:text-emerald-600 transition-colors">Recipes</a>
+        <a href="./blogs.html" class="hover:text-emerald-600 transition-colors">Blog</a>
+        <a href="./contact.html" class="hover:text-emerald-600 transition-colors">Contact</a>
+        <a href="./about.html" class="hover:text-emerald-600 transition-colors">About us</a>
+      </nav>
+
+      <div class="flex items-center space-x-4 text-gray-600">
+        <a href="#" aria-label="Facebook" class="hover:text-emerald-600 transition-colors"><i
+            class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter" class="hover:text-emerald-600 transition-colors"><i
+            class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram" class="hover:text-emerald-600 transition-colors"><i
+            class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Slider -->
+  <section class="max-w-7xl mx-auto px-4 py-12 relative overflow-hidden">
+    <div class="relative">
+      <!-- Slider Container -->
+      <div id="heroSlider" class="flex hero-slider">
+
+        <!-- Slide 1 -->
+        <div
+          class="min-w-full grid md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-emerald-50 to-teal-50 rounded-3xl p-8 md:p-12 shadow-lg">
+          <div>
+            <span class="text-sm font-semibold text-emerald-600 uppercase tracking-wider">Featured Recipe</span>
+            <h1 class="text-4xl md:text-5xl font-bold mt-3 leading-tight">Spicy delicious <br> chicken wings</h1>
+            <p class="mt-4 text-gray-600 text-lg">Crispy on the outside, tender inside — perfect for family dinners and
+              parties.</p>
+            <div class="flex items-center mt-6 space-x-6 text-sm text-gray-600">
+              <div class="flex items-center space-x-2 bg-white px-3 py-1 rounded-full">
+                <i class="far fa-clock text-emerald-500"></i><span>30 Minutes</span>
+              </div>
+              <div class="flex items-center space-x-2 bg-white px-3 py-1 rounded-full">
+                <i class="fas fa-utensils text-emerald-500"></i><span>Chicken</span>
+              </div>
+            </div>
+            <div class="flex items-center mt-6">
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&h=100&q=80&crop=face"
+                class="w-12 h-12 rounded-full border-2 border-white shadow" alt="author">
+              <div class="ml-3">
+                <p class="text-sm font-semibold">John Smith</p>
+                <p class="text-xs text-gray-500">15 March 2022</p>
+              </div>
+            </div>
+            <a href="./recipe-details.html"
+              class="mt-8 inline-block px-8 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition shadow-lg">View
+              Recipes</a>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            alt="Chicken Wings" class="rounded-2xl shadow-xl w-full h-96 object-cover">
+        </div>
+
+        <!-- Slide 2 -->
+        <div
+          class="min-w-full grid md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-8 md:p-12 shadow-lg">
+          <div>
+            <span class="text-sm font-semibold text-amber-600 uppercase tracking-wider">Popular Choice</span>
+            <h1 class="text-4xl md:text-5xl font-bold mt-3 leading-tight">Chorizo, tomato <br> and cheese pizza</h1>
+            <p class="mt-4 text-gray-600 text-lg">A crispy crust topped with spicy chorizo, juicy tomatoes, and gooey
+              cheese.</p>
+            <div class="flex items-center mt-6 space-x-6 text-sm text-gray-600">
+              <div class="flex items-center space-x-2 bg-white px-3 py-1 rounded-full">
+                <i class="far fa-clock text-amber-500"></i><span>25 Minutes</span>
+              </div>
+              <div class="flex items-center space-x-2 bg-white px-3 py-1 rounded-full">
+                <i class="fas fa-utensils text-amber-500"></i><span>Pizza</span>
+              </div>
+            </div>
+            <div class="flex items-center mt-6">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80&crop=face"
+                class="w-12 h-12 rounded-full border-2 border-white shadow" alt="author">
+              <div class="ml-3">
+                <p class="text-sm font-semibold">David Lee</p>
+                <p class="text-xs text-gray-500">10 April 2022</p>
+              </div>
+            </div>
+            <a href="#"
+              class="mt-8 inline-block px-8 py-3 bg-amber-600 text-white font-medium rounded-lg hover:bg-amber-700 transition shadow-lg">View
+              Recipes</a>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="min-w-full grid md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12 shadow-lg">
+          <div>
+            <span class="text-sm font-semibold text-blue-600 uppercase tracking-wider">Editor's Pick</span>
+            <h1 class="text-4xl md:text-5xl font-bold mt-3 leading-tight">Super hacked <br> egg drop soup</h1>
+            <p class="mt-4 text-gray-600 text-lg">Comforting Asian-style soup with silky eggs and flavorful broth.</p>
+            <div class="flex items-center mt-6 space-x-6 text-sm text-gray-600">
+              <div class="flex items-center space-x-2 bg-white px-3 py-1 rounded-full">
+                <i class="far fa-clock text-blue-500"></i><span>20 Minutes</span>
+              </div>
+              <div class="flex items-center space-x-2 bg-white px-3 py-1 rounded-full">
+                <i class="fas fa-utensils text-blue-500"></i><span>Soup</span>
+              </div>
+            </div>
+            <div class="flex items-center mt-6">
+              <img
+                src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&h=100&q=80&crop=face"
+                class="w-12 h-12 rounded-full border-2 border-white shadow" alt="author">
+              <div class="ml-3">
+                <p class="text-sm font-semibold">Emily Brown</p>
+                <p class="text-xs text-gray-500">5 May 2022</p>
+              </div>
+            </div>
+            <a href="#"
+              class="mt-8 inline-block px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition shadow-lg">View
+              Recipes</a>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            alt="Soup" class="rounded-2xl shadow-xl w-full h-96 object-cover">
+        </div>
+
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="absolute top-1/2 left-4 transform -translate-y-1/2">
+        <button id="prevBtn"
+          class="bg-white/80 backdrop-blur-sm text-gray-800 p-3 rounded-full shadow-lg hover:bg-white hover:text-emerald-600 transition-all">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+      </div>
+      <div class="absolute top-1/2 right-4 transform -translate-y-1/2">
+        <button id="nextBtn"
+          class="bg-white/80 backdrop-blur-sm text-gray-800 p-3 rounded-full shadow-lg hover:bg-white hover:text-emerald-600 transition-all">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Slider Indicators -->
+      <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <button class="w-3 h-3 rounded-full bg-emerald-500 indicator" data-slide="0"></button>
+        <button class="w-3 h-3 rounded-full bg-gray-300 indicator" data-slide="1"></button>
+        <button class="w-3 h-3 rounded-full bg-gray-300 indicator" data-slide="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slider Script -->
+  <script>
+    const slider = document.getElementById('heroSlider');
+    const slides = slider.children.length;
+    const indicators = document.querySelectorAll('.indicator');
+    let index = 0;
+
+    function updateSlider() {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+
+      // Update indicators
+      indicators.forEach((indicator, i) => {
+        if (i === index) {
+          indicator.classList.remove('bg-gray-300');
+          indicator.classList.add('bg-emerald-500');
+        } else {
+          indicator.classList.remove('bg-emerald-500');
+          indicator.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      index = (index + 1) % slides;
+      updateSlider();
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      index = (index - 1 + slides) % slides;
+      updateSlider();
+    });
+
+    // Indicator click
+    indicators.forEach((indicator, i) => {
+      indicator.addEventListener('click', () => {
+        index = i;
+        updateSlider();
+      });
+    });
+
+    // Auto Slide
+    setInterval(() => {
+      index = (index + 1) % slides;
+      updateSlider();
+    }, 8000);
+  </script>
+
+  <!-- Categories -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="flex justify-between items-center mb-10">
+      <h2 class="text-3xl font-bold">Recipe Categories</h2>
+      <a href="#"
+        class="px-6 py-3 bg-emerald-100 text-emerald-700 font-medium rounded-lg hover:bg-emerald-200 transition-colors">View
+        All Categories</a>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+      <div class="flex flex-col items-center space-y-3 category-icon cursor-pointer">
+        <div class="w-20 h-20 rounded-full bg-amber-100 flex items-center justify-center shadow-md">
+          <!-- <i class="fas fa-coffee text-amber-600 text-2xl"></i> -->
+          <img src="/images/breakfast.png" />
+        </div>
+        <p class="font-medium">Breakfast</p>
+      </div>
+      <div class="flex flex-col items-center space-y-3 category-icon cursor-pointer">
+        <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center shadow-md">
+          <!-- <i class="fas fa-leaf text-green-600 text-2xl"></i> -->
+          <img src="/images/vegan.png" />
+        </div>
+        <p class="font-medium">Vegan</p>
+      </div>
+      <div class="flex flex-col items-center space-y-3 category-icon cursor-pointer">
+        <div class="w-20 h-20 rounded-full bg-red-100 flex items-center justify-center shadow-md">
+          <!-- <i class="fas fa-drumstick-bite text-red-600 text-2xl"></i> -->
+          <img src="/images/meat.png" />
+        </div>
+        <p class="font-medium">Meat</p>
+      </div>
+      <div class="flex flex-col items-center space-y-3 category-icon cursor-pointer">
+        <div class="w-20 h-20 rounded-full bg-pink-100 flex items-center justify-center shadow-md">
+          <!-- <i class="fas fa-ice-cream text-pink-600 text-2xl"></i> -->
+          <img src="/images/dessert.png" />
+        </div>
+        <p class="font-medium">Dessert</p>
+      </div>
+      <div class="flex flex-col items-center space-y-3 category-icon cursor-pointer">
+        <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center shadow-md">
+          <!-- <i class="fas fa-hamburger text-blue-600 text-2xl"></i> -->
+          <img src="/images/lunch.png" />
+        </div>
+        <p class="font-medium">Lunch</p>
+      </div>
+      <div class="flex flex-col items-center space-y-3 category-icon cursor-pointer">
+        <div class="w-20 h-20 rounded-full bg-purple-100 flex items-center justify-center shadow-md">
+          <!-- <i class="fas fa-cookie-bite text-purple-600 text-2xl"></i> -->
+          <img src="/images/chocolate.png" />
+        </div>
+        <p class="font-medium">Chocolate</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipes Grid -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="flex items-center justify-between mb-12">
+      <h2 class="text-3xl font-bold">Simple and tasty recipes</h2>
+      <a href="#" class="text-emerald-600 font-medium hover:underline flex items-center">
+        View All Recipes
+        <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md recipe-card">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Beef Burger" class="w-full h-56 object-cover">
+          <button
+            class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:bg-white hover:text-red-500 transition">
+            <i class="far fa-heart"></i>
+          </button>
+          <span
+            class="absolute bottom-4 left-4 bg-amber-500 text-white text-xs px-3 py-1 rounded-full font-medium">Popular</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-2">Big and Juicy Wagyu Beef Burger</h3>
+          <div class="flex items-center text-sm text-gray-600 space-x-4">
+            <span><i class="far fa-clock mr-1 text-emerald-500"></i>30 Minutes</span>
+            <span><i class="fas fa-utensils mr-1 text-emerald-500"></i>Snack</span>
+          </div>
+          <div class="flex items-center mt-4">
+            <div class="flex text-amber-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="text-sm text-gray-500 ml-2">(4.5)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md recipe-card">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Salmon" class="w-full h-56 object-cover">
+          <button
+            class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:bg-white hover:text-red-500 transition">
+            <i class="far fa-heart"></i>
+          </button>
+          <span
+            class="absolute bottom-4 left-4 bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-medium">Healthy</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-2">Fresh Lime Roasted Salmon</h3>
+          <div class="flex items-center text-sm text-gray-600 space-x-4">
+            <span><i class="far fa-clock mr-1 text-emerald-500"></i>30 Minutes</span>
+            <span><i class="fas fa-utensils mr-1 text-emerald-500"></i>Fish</span>
+          </div>
+          <div class="flex items-center mt-4">
+            <div class="flex text-amber-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="text-sm text-gray-500 ml-2">(5.0)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md recipe-card">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Pancake" class="w-full h-56 object-cover">
+          <button
+            class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:bg-white hover:text-red-500 transition">
+            <i class="far fa-heart"></i>
+          </button>
+          <span
+            class="absolute bottom-4 left-4 bg-amber-500 text-white text-xs px-3 py-1 rounded-full font-medium">Popular</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-2">Strawberry Oatmeal Pancakes</h3>
+          <div class="flex items-center text-sm text-gray-600 space-x-4">
+            <span><i class="far fa-clock mr-1 text-emerald-500"></i>20 Minutes</span>
+            <span><i class="fas fa-utensils mr-1 text-emerald-500"></i>Breakfast</span>
+          </div>
+          <div class="flex items-center mt-4">
+            <div class="flex text-amber-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <span class="text-sm text-gray-500 ml-2">(4.0)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md recipe-card">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Salad" class="w-full h-56 object-cover">
+          <button
+            class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:bg-white hover:text-red-500 transition">
+            <i class="far fa-heart"></i>
+          </button>
+          <span
+            class="absolute bottom-4 left-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full font-medium">Vegan</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-2">Fresh Mixed Mayonnaise Salad</h3>
+          <div class="flex items-center text-sm text-gray-600 space-x-4">
+            <span><i class="far fa-clock mr-1 text-emerald-500"></i>15 Minutes</span>
+            <span><i class="fas fa-utensils mr-1 text-emerald-500"></i>Healthy</span>
+          </div>
+          <div class="flex items-center mt-4">
+            <div class="flex text-amber-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="text-sm text-gray-500 ml-2">(4.7)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md recipe-card">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1529042410759-befb1204b468?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Meatballs" class="w-full h-56 object-cover">
+          <button
+            class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:bg-white hover:text-red-500 transition">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-2">Chicken Meatballs with Cream Cheese</h3>
+          <div class="flex items-center text-sm text-gray-600 space-x-4">
+            <span><i class="far fa-clock mr-1 text-emerald-500"></i>35 Minutes</span>
+            <span><i class="fas fa-utensils mr-1 text-emerald-500"></i>Meat</span>
+          </div>
+          <div class="flex items-center mt-4">
+            <div class="flex text-amber-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <span class="text-sm text-gray-500 ml-2">(4.2)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md recipe-card">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Salad" class="w-full h-56 object-cover">
+          <button
+            class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:bg-white hover:text-red-500 transition">
+            <i class="far fa-heart"></i>
+          </button>
+          <span
+            class="absolute bottom-4 left-4 bg-pink-500 text-white text-xs px-3 py-1 rounded-full font-medium">Sweet</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-2">Fruity Pancake with Orange & Blueberry</h3>
+          <div class="flex items-center text-sm text-gray-600 space-x-4">
+            <span><i class="far fa-clock mr-1 text-emerald-500"></i>25 Minutes</span>
+            <span><i class="fas fa-utensils mr-1 text-emerald-500"></i>Breakfast</span>
+          </div>
+          <div class="flex items-center mt-4">
+            <div class="flex text-amber-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="text-sm text-gray-500 ml-2">(4.6)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md recipe-card">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Chicken Rice" class="w-full h-56 object-cover">
+          <button
+            class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:bg-white hover:text-red-500 transition">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-2">One Pot Chicken and Rice</h3>
+          <div class="flex items-center text-sm text-gray-600 space-x-4">
+            <span><i class="far fa-clock mr-1 text-emerald-500"></i>40 Minutes</span>
+            <span><i class="fas fa-utensils mr-1 text-emerald-500"></i>Main</span>
+          </div>
+          <div class="flex items-center mt-4">
+            <div class="flex text-amber-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <span class="text-sm text-gray-500 ml-2">(4.1)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md recipe-card">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Salad" class="w-full h-56 object-cover">
+          <button
+            class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:bg-white hover:text-red-500 transition">
+            <i class="far fa-heart"></i>
+          </button>
+          <span
+            class="absolute bottom-4 left-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full font-medium">Italian</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-2">Creamy Chicken and Bacon Pasta</h3>
+          <div class="flex items-center text-sm text-gray-600 space-x-4">
+            <span><i class="far fa-clock mr-1 text-emerald-500"></i>30 Minutes</span>
+            <span><i class="fas fa-utensils mr-1 text-emerald-500"></i>Pasta</span>
+          </div>
+          <div class="flex items-center mt-4">
+            <div class="flex text-amber-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="text-sm text-gray-500 ml-2">(4.9)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Section -->
+  <section class="max-w-7xl mx-auto px-4 py-16 text-center">
+    <h2 class="text-3xl font-bold mb-3">Check out @foodieland on Instagram</h2>
+    <p class="text-gray-600 mb-8">Follow us for daily food inspiration and behind-the-scenes content</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Instagram Post 1 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+        <img
+          src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          class="w-full h-64 object-cover" alt="Salad">
+        <div class="p-4 text-left">
+          <div class="flex items-center mb-2">
+            <svg class="w-5 h-5 text-red-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-sm text-gray-600">Liked by 44,686 people</span>
+          </div>
+          <p class="text-sm mb-1">Fresh and vibrant salad bowl for a healthy start! 🥗 #foodieland #healthyfood</p>
+          <p class="text-xs text-gray-500">September 19</p>
+        </div>
+      </div>
+
+      <!-- Instagram Post 2 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+        <img
+          src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          class="w-full h-64 object-cover" alt="Dessert">
+        <div class="p-4 text-left">
+          <div class="flex items-center mb-2">
+            <svg class="w-5 h-5 text-red-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-sm text-gray-600">Liked by 52,431 people</span>
+          </div>
+          <p class="text-sm mb-1">Indulgent chocolate dessert to satisfy your sweet tooth! 🍰 #foodieland #dessert</p>
+          <p class="text-xs text-gray-500">September 18</p>
+        </div>
+      </div>
+
+      <!-- Instagram Post 3 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+        <img
+          src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          class="w-full h-64 object-cover" alt="Ingredients">
+        <div class="p-4 text-left">
+          <div class="flex items-center mb-2">
+            <svg class="w-5 h-5 text-red-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-sm text-gray-600">Liked by 38,725 people</span>
+          </div>
+          <p class="text-sm mb-1">Fresh ingredients from local markets for our special dishes! 🍅 #foodieland #fresh</p>
+          <p class="text-xs text-gray-500">September 17</p>
+        </div>
+      </div>
+
+      <!-- Instagram Post 4 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+        <img
+          src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          class="w-full h-64 object-cover" alt="BBQ">
+        <div class="p-4 text-left">
+          <div class="flex items-center mb-2">
+            <svg class="w-5 h-5 text-red-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-sm text-gray-600">Liked by 61,924 people</span>
+          </div>
+          <p class="text-sm mb-1">Perfectly grilled Japanese BBQ for the weekend feast! 🍖 #foodieland #bbq</p>
+          <p class="text-xs text-gray-500">September 16</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="#"
+      class="mt-8 inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-medium hover:opacity-90 transition">
+      <i class="fab fa-instagram mr-2"></i>Visit Our Instagram
+    </a>
+  </section>
+
+  <!-- More Recipes Section -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold mb-2 text-center">Find this delicious recipe to make your day</h2>
+    <p class="text-gray-600 mb-10 text-center">Discover our collection of tasty and easy-to-make recipes</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Recipe Card 1 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Mixed Tropical Fruit Salad" class="w-full h-56 object-cover">
+          <div class="absolute top-4 right-4 bg-white rounded-full p-2 shadow">
+            <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-2">Mixed Tropical Fruit Salad</h3>
+          <div class="flex items-center text-gray-600 mb-3">
+            <svg class="w-4 h-4 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>30 Minutes</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span
+              class="inline-block bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-medium">Healthy</span>
+            <a href="#" class="text-emerald-600 hover:text-emerald-800 text-sm font-medium">View Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Card 2 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Wagyu Beef Cheeseburger" class="w-full h-56 object-cover">
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-2">Wagyu Beef Cheeseburger</h3>
+          <div class="flex items-center text-gray-600 mb-3">
+            <svg class="w-4 h-4 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>30 Minutes</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span
+              class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-medium">Western</span>
+            <a href="#" class="text-emerald-600 hover:text-emerald-800 text-sm font-medium">View Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Card 3 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Salad" class="w-full h-56 object-cover">
+          <div class="absolute top-4 right-4 bg-white rounded-full p-2 shadow">
+            <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-2">Creamy Mushroom Pasta</h3>
+          <div class="flex items-center text-gray-600 mb-3">
+            <svg class="w-4 h-4 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>45 Minutes</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span
+              class="inline-block bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full font-medium">Italian</span>
+            <a href="#" class="text-emerald-600 hover:text-emerald-800 text-sm font-medium">View Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Card 4 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Chocolate Lava Cake" class="w-full h-56 object-cover">
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-2">Chocolate Lava Cake</h3>
+          <div class="flex items-center text-gray-600 mb-3">
+            <svg class="w-4 h-4 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>25 Minutes</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span
+              class="inline-block bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full font-medium">Dessert</span>
+            <a href="#" class="text-emerald-600 hover:text-emerald-800 text-sm font-medium">View Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Card 5 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Grilled Salmon Teriyaki" class="w-full h-56 object-cover">
+          <div class="absolute top-4 right-4 bg-white rounded-full p-2 shadow">
+            <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-2">Grilled Salmon Teriyaki</h3>
+          <div class="flex items-center text-gray-600 mb-3">
+            <svg class="w-4 h-4 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>35 Minutes</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span
+              class="inline-block bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full font-medium">Japanese</span>
+            <a href="#" class="text-emerald-600 hover:text-emerald-800 text-sm font-medium">View Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Card 6 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Avocado Toast" class="w-full h-56 object-cover">
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-2">Avocado Toast</h3>
+          <div class="flex items-center text-gray-600 mb-3">
+            <svg class="w-4 h-4 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>15 Minutes</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span
+              class="inline-block bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-medium">Healthy</span>
+            <a href="#" class="text-emerald-600 hover:text-emerald-800 text-sm font-medium">View Recipe →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="#"
+        class="inline-block px-8 py-3 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition shadow-lg">View
+        All Recipes</a>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="bg-gradient-to-r from-emerald-50 to-teal-50 py-16">
+    <div class="max-w-2xl mx-auto text-center px-4">
+      <h2 class="text-3xl font-bold mb-3">Deliciousness to your inbox</h2>
+      <p class="text-gray-600 mb-6">Join our community of food lovers and get exclusive recipes, tips, and special
+        offers.</p>
+      <form class="flex flex-col sm:flex-row justify-center gap-2 max-w-md mx-auto">
+        <input type="email" placeholder="Your email address"
+          class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent flex-grow">
+        <button type="submit"
+          class="px-6 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition shadow-md">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+        <div>
+          <a href="#" class="text-2xl font-bold flex items-center">
+            <i class="fas fa-utensils text-emerald-400 mr-2"></i>
+            Foodieland<span class="text-emerald-400">.</span>
+          </a>
+          <p class="mt-2 text-gray-400 max-w-xs">Discover delicious recipes and culinary inspiration from around the
+            world.</p>
+        </div>
+
+        <nav class="flex flex-wrap justify-center gap-6 text-gray-300">
+          <a href="#" class="hover:text-emerald-400 transition-colors">Recipes</a>
+          <a href="#" class="hover:text-emerald-400 transition-colors">Blog</a>
+          <a href="#" class="hover:text-emerald-400 transition-colors">Contact</a>
+          <a href="#" class="hover:text-emerald-400 transition-colors">About us</a>
+        </nav>
+
+        <div class="flex space-x-4 text-gray-300">
+          <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 Foodieland. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

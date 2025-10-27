@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Article - Foodieland</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .recipe-card {
+      transition: all 0.3s ease;
+    }
+    .recipe-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .category-tag {
+      transition: all 0.2s ease;
+    }
+    .category-tag:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+  <!-- Navbar -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-gray-900 flex items-center">
+        <i class="fas fa-utensils text-emerald-500 mr-2"></i>
+        Foodieland<span class="text-emerald-500">.</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
+        <a href="/" class="hover:text-emerald-600 transition-colors">Home</a>
+        <a href="/recipe-details.html" class="hover:text-emerald-600 transition-colors">Recipes</a>
+        <a href="./blogs.html" class="hover:text-emerald-600 transition-colors">Blog</a>
+        <a href="./contact.html" class="hover:text-emerald-600 transition-colors">Contact</a>
+        <a href="./about.html" class="hover:text-emerald-600 transition-colors">About us</a>
+      </nav>
+      <div class="flex items-center space-x-4 text-gray-600">
+        <a href="#" aria-label="Facebook" class="hover:text-emerald-600 transition-colors"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter" class="hover:text-emerald-600 transition-colors"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram" class="hover:text-emerald-600 transition-colors"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Blog Hero Section -->
+  <section class="bg-gradient-to-r from-emerald-50 to-teal-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Blog & Article</h1>
+      <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Discover delicious recipes, cooking tips, and food stories from our community of food lovers.</p>
+      
+      <div class="max-w-2xl mx-auto">
+        <div class="relative">
+          <input type="text" placeholder="Search articles, recipes, and more..." class="w-full px-6 py-4 pr-12 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent shadow-sm">
+          <button class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-emerald-600 text-white p-3 rounded-full hover:bg-emerald-700 transition">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Blog Articles -->
+      <div class="lg:col-span-2">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-bold">Latest Articles</h2>
+          <div class="flex space-x-2">
+            <button class="px-4 py-2 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition">All</button>
+            <button class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition">Recipes</button>
+            <button class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition">Tips</button>
+            <button class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition">Lifestyle</button>
+          </div>
+        </div>
+
+        <!-- Blog Article 1 -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden mb-8 blog-card">
+          <div class="md:flex">
+            <div class="md:w-2/5">
+              <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Crochet Projects for Noodle Lovers" class="w-full h-64 md:h-full object-cover">
+            </div>
+            <div class="md:w-3/5 p-6">
+              <div class="flex items-center mb-4">
+                <span class="category-tag bg-amber-100 text-amber-800 text-xs px-3 py-1 rounded-full font-medium mr-3">Lifestyle</span>
+                <span class="text-sm text-gray-500"><i class="far fa-clock mr-1"></i>5 min read</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Crochet Projects for Noodle Lovers</h3>
+              <p class="text-gray-600 mb-4">Discover fun and creative crochet projects inspired by your favorite noodle dishes. From ramen to spaghetti, bring your love for noodles into your crafting.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&h=100&q=80&crop=face" class="w-10 h-10 rounded-full mr-3" alt="author">
+                  <div>
+                    <p class="font-medium">Sarah Johnson</p>
+                    <p class="text-sm text-gray-500">March 15, 2022</p>
+                  </div>
+                </div>
+                <a href="./single-blog.html" class="text-emerald-600 font-medium hover:underline">Read More →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Article 2 -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden mb-8 blog-card">
+          <div class="md:flex">
+            <div class="md:w-2/5">
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="10 Healthy Eating Tips" class="w-full h-64 md:h-full object-cover">
+            </div>
+            <div class="md:w-3/5 p-6">
+              <div class="flex items-center mb-4">
+                <span class="category-tag bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-medium mr-3">Health</span>
+                <span class="text-sm text-gray-500"><i class="far fa-clock mr-1"></i>8 min read</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3">10 Healthy Eating Tips for Busy Professionals</h3>
+              <p class="text-gray-600 mb-4">Maintaining a healthy diet can be challenging with a busy schedule. Here are 10 practical tips to help you eat well without spending hours in the kitchen.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80&crop=face" class="w-10 h-10 rounded-full mr-3" alt="author">
+                  <div>
+                    <p class="font-medium">Michael Chen</p>
+                    <p class="text-sm text-gray-500">March 12, 2022</p>
+                  </div>
+                </div>
+                <a href="#" class="text-emerald-600 font-medium hover:underline">Read More →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Article 3 -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden mb-8 blog-card">
+          <div class="md:flex">
+            <div class="md:w-2/5">
+              <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="The Art of Food Photography" class="w-full h-64 md:h-full object-cover">
+            </div>
+            <div class="md:w-3/5 p-6">
+              <div class="flex items-center mb-4">
+                <span class="category-tag bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-medium mr-3">Photography</span>
+                <span class="text-sm text-gray-500"><i class="far fa-clock mr-1"></i>12 min read</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3">The Art of Food Photography: Tips and Tricks</h3>
+              <p class="text-gray-600 mb-4">Learn how to capture stunning food photos that will make your dishes look irresistible. From lighting to composition, master the basics of food photography.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80&crop=face" class="w-10 h-10 rounded-full mr-3" alt="author">
+                  <div>
+                    <p class="font-medium">Emma Wilson</p>
+                    <p class="text-sm text-gray-500">March 10, 2022</p>
+                  </div>
+                </div>
+                <a href="#" class="text-emerald-600 font-medium hover:underline">Read More →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Article 4 -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden mb-8 blog-card">
+          <div class="md:flex">
+            <div class="md:w-2/5">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="BBQ Techniques" class="w-full h-64 md:h-full object-cover">
+            </div>
+            <div class="md:w-3/5 p-6">
+              <div class="flex items-center mb-4">
+                <span class="category-tag bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full font-medium mr-3">Cooking</span>
+                <span class="text-sm text-gray-500"><i class="far fa-clock mr-1"></i>15 min read</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Mastering the Grill: BBQ Techniques for Beginners</h3>
+              <p class="text-gray-600 mb-4">Ready to up your BBQ game? Learn essential techniques, temperature control, and flavor combinations that will take your grilling skills to the next level.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&h=100&q=80&crop=face" class="w-10 h-10 rounded-full mr-3" alt="author">
+                  <div>
+                    <p class="font-medium">James Rodriguez</p>
+                    <p class="text-sm text-gray-500">March 8, 2022</p>
+                  </div>
+                </div>
+                <a href="#" class="text-emerald-600 font-medium hover:underline">Read More →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center mt-8">
+          <nav class="flex items-center space-x-2">
+            <button class="px-3 py-1 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="px-4 py-1 rounded-lg bg-emerald-600 text-white font-medium">1</button>
+            <button class="px-4 py-1 rounded-lg bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 transition">2</button>
+            <button class="px-4 py-1 rounded-lg bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 transition">3</button>
+            <button class="px-4 py-1 rounded-lg bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 transition">4</button>
+            <button class="px-3 py-1 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <!-- Tasty Recipes -->
+        <div class="bg-white rounded-2xl shadow-md p-6 mb-8">
+          <h2 class="text-xl font-bold mb-6 flex items-center">
+            <i class="fas fa-fire text-amber-500 mr-2"></i>
+            Tasty Recipes
+          </h2>
+          
+          <!-- Recipe Card 1 -->
+          <div class="flex items-start mb-6 recipe-card cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Chicken Meatballs" class="w-20 h-20 rounded-lg object-cover mr-4">
+            <div>
+              <h3 class="font-semibold mb-1">Chicken Meatballs with Cream Cheese</h3>
+              <div class="flex items-center text-sm text-gray-600">
+                <span><i class="far fa-clock mr-1"></i>35 min</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Recipe Card 2 -->
+          <div class="flex items-start mb-6 recipe-card cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Vegetable Pasta" class="w-20 h-20 rounded-lg object-cover mr-4">
+            <div>
+              <h3 class="font-semibold mb-1">Creamy Vegetable Pasta</h3>
+              <div class="flex items-center text-sm text-gray-600">
+                <span><i class="far fa-clock mr-1"></i>25 min</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Recipe Card 3 -->
+          <div class="flex items-start mb-6 recipe-card cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Chocolate Cake" class="w-20 h-20 rounded-lg object-cover mr-4">
+            <div>
+              <h3 class="font-semibold mb-1">Decadent Chocolate Cake</h3>
+              <div class="flex items-center text-sm text-gray-600">
+                <span><i class="far fa-clock mr-1"></i>60 min</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Recipe Card 4 -->
+          <div class="flex items-start recipe-card cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Avocado Toast" class="w-20 h-20 rounded-lg object-cover mr-4">
+            <div>
+              <h3 class="font-semibold mb-1">Avocado Toast with Poached Egg</h3>
+              <div class="flex items-center text-sm text-gray-600">
+                <span><i class="far fa-clock mr-1"></i>15 min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Health Eating Ad Banner -->
+        <div class="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl shadow-md p-6 mb-8 text-white">
+          <h2 class="text-xl font-bold mb-3">Healthy Eating Made Easy</h2>
+          <p class="mb-4">Get personalized meal plans and nutrition tips from our experts.</p>
+          <button class="px-4 py-2 bg-white text-emerald-600 font-medium rounded-lg hover:bg-gray-100 transition">
+            Learn More
+          </button>
+        </div>
+
+        <!-- Categories -->
+        <div class="bg-white rounded-2xl shadow-md p-6 mb-8">
+          <h2 class="text-xl font-bold mb-6">Categories</h2>
+          <div class="space-y-3">
+            <a href="#" class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition">
+              <span class="flex items-center">
+                <i class="fas fa-utensils text-emerald-500 mr-3"></i>
+                Recipes
+              </span>
+              <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">24</span>
+            </a>
+            <a href="#" class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition">
+              <span class="flex items-center">
+                <i class="fas fa-lightbulb text-amber-500 mr-3"></i>
+                Tips
+              </span>
+              <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">18</span>
+            </a>
+            <a href="#" class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition">
+              <span class="flex items-center">
+                <i class="fas fa-heart text-red-500 mr-3"></i>
+                Lifestyle
+              </span>
+              <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">12</span>
+            </a>
+            <a href="#" class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition">
+              <span class="flex items-center">
+                <i class="fas fa-camera text-blue-500 mr-3"></i>
+                Photography
+              </span>
+              <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">8</span>
+            </a>
+            <a href="#" class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition">
+              <span class="flex items-center">
+                <i class="fas fa-dumbbell text-purple-500 mr-3"></i>
+                Health
+              </span>
+              <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">15</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="bg-white rounded-2xl shadow-md p-6">
+          <h2 class="text-xl font-bold mb-3">Subscribe to Our Newsletter</h2>
+          <p class="text-gray-600 mb-4">Get the latest recipes and articles delivered to your inbox.</p>
+          <form>
+            <input type="email" placeholder="Your email address" class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-3 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+            <button type="submit" class="w-full px-4 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="bg-gradient-to-r from-emerald-50 to-teal-50 py-16">
+    <div class="max-w-2xl mx-auto text-center px-4">
+      <h2 class="text-3xl font-bold mb-3">Deliciousness to your inbox</h2>
+      <p class="text-gray-600 mb-6">Join our community of food lovers and get exclusive recipes, tips, and special offers.</p>
+      <form class="flex flex-col sm:flex-row justify-center gap-2 max-w-md mx-auto">
+        <input type="email" placeholder="Your email address" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent flex-grow">
+        <button type="submit" class="px-6 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition shadow-md">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+        <div>
+          <a href="#" class="text-2xl font-bold flex items-center">
+            <i class="fas fa-utensils text-emerald-400 mr-2"></i>
+            Foodieland<span class="text-emerald-400">.</span>
+          </a>
+          <p class="mt-2 text-gray-400 max-w-xs">Discover delicious recipes and culinary inspiration from around the world.</p>
+        </div>
+        
+        <nav class="flex flex-wrap justify-center gap-6 text-gray-300">
+          <a href="#" class="hover:text-emerald-400 transition-colors">Recipes</a>
+          <a href="#" class="hover:text-emerald-400 transition-colors">Blog</a>
+          <a href="#" class="hover:text-emerald-400 transition-colors">Contact</a>
+          <a href="#" class="hover:text-emerald-400 transition-colors">About us</a>
+        </nav>
+        
+        <div class="flex space-x-4 text-gray-300">
+          <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 Foodieland. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
